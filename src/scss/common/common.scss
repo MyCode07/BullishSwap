@@ -1,0 +1,67 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Bahnschrift;
+    scroll-behavior: smooth;
+    line-height: 1.2;
+    font-style: normal;
+    color: #000;
+    font-weight: 400;
+    font-size: 16px;   
+
+    &._noscroll {
+        overflow: hidden;
+    }
+
+    &::-webkit-scrollbar {
+    }
+
+    &::-webkit-scrollbar-thumb {
+    }
+}
+
+.wrapper {
+    min-height: 100%;
+    scroll-behavior: smooth;
+    overflow-x: clip;
+
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 1 auto;
+}
+
+._container {
+    width: 100%;
+    margin-inline: auto;
+    max-width: $container + px;
+
+    @media (max-width: $containerWithPadding + px) {
+        max-width: none;
+        padding-inline: $padding + px;
+    }
+}
+
+section {
+}
+
+h1 {
+}
+
+h2 {
+}
+
+h3 {
+}
+
+figure,
+img,
+svg {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
