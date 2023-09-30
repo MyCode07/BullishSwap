@@ -1,4 +1,33 @@
 .footer {
+    position: relative;
+
+    &:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        min-height: 1000px;
+        background: linear-gradient(
+            180deg,
+            #090a0b 0%,
+            rgba(9, 10, 11, 0.24) 45.83%,
+            rgba(9, 10, 11, 0.44) 58.85%,
+            rgba(9, 10, 11, 0.87) 85.94%
+        );
+        z-index: -1;
+    }
+
+    .footer-bgi {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        min-height: 1000px;
+        object-fit: cover;
+        z-index: -1;
+    }
+
     // .footer__container
 
     &__container {
@@ -25,11 +54,10 @@
                 }
 
                 & > :not(:last-child) {
-
                     @media (min-width: 426px) {
                         @include adaptive-value("margin-right", 107, 20, 1);
                     }
-                    
+
                     @media (max-width: 425px) {
                         margin-bottom: 20px;
                     }

@@ -58,6 +58,11 @@ h3 {
 
 h2 {
     @include adaptive-value("font-size", 50, 30, 1);
+    text-shadow:
+        5px 0 0 black,
+        /*right */ 0 5px 0 black,
+        /*top */ -5px 0 0 black,
+        /*left */ 0 -5px 0 black; /*bottom */
 }
 
 h3 {

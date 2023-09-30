@@ -7,9 +7,12 @@ import { accorden } from "./static/accordeon.js";
 
 import "./parts/menu.js";
 import "./parts/sliders.js";
- 
+
 // toTop();
 // replaceDomElements();
 // runTicker()
 accorden();
-// maskInputs('+7 999 999 999 999', '.phone') 
+// maskInputs('+7 999 999 999 999', '.phone')
+
+
+
