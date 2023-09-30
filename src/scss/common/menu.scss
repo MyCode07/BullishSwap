@@ -1,0 +1,54 @@
+.menu {
+    // .menu__container
+
+    &__container {
+    }
+
+    // .menu__body
+
+    &__body {
+    }
+
+    // .menu__top
+
+    &__top {
+        nav {
+            ul {
+                & > :not(:last-child) {
+                    margin-bottom: 24px;
+                }
+
+                li {
+                    a {
+                        color: #fff;
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+._side {
+    // ._side-fixed
+
+    &-fixed {
+    }
+}
+._side-fixed {
+    // ._side-fixed__container
+
+    &__container {
+    }
+
+    // ._side-fixed__body
+
+    &__body {
+    }
+
+    // ._side-fixed__top
+
+    &__top {
+    }
+}
+._gradient {
+}

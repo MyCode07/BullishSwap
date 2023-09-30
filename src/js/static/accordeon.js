@@ -30,6 +30,7 @@ export const accorden = () => {
                 
                 openBtn.addEventListener('click', function (e) {
                     toggleAccordion(item);
+                    openBtn.classList.toggle('_active')
                 });
             });
     });
