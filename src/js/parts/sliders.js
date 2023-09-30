@@ -6,17 +6,12 @@ const pagination = document.querySelector('.pagination')
 
 if (sliders.length) {
     sliders.forEach(slider => {
-
-
         new Swiper(slider, {
             modules: [
                 Pagination, Autoplay, Grid
             ],
 
-            grid: {
-                rows: 2
-            },
-            slidesPerView: 4,
+            slidesPerView: 'auto',
             spaceBetween: 32,
             lazy: true,
             autoplay: true,
@@ -29,6 +24,18 @@ if (sliders.length) {
                 el: pagination,
                 clickable: true
             },
+            breakpoints: {
+                300: {
+                    centeredSlides: true,
+                    grid: false
+                },
+                769: {
+                    centeredSlides: false,
+                    grid: {
+                        rows: 2
+                    },
+                }
+            }
 
 
         })

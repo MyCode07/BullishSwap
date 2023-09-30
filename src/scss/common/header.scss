@@ -6,6 +6,12 @@
     z-index: 99;
     @include adaptive-value("padding-top", 60, 20, 1);
 
+    @media (max-width:768px){
+        width: auto;
+        left: unset;
+        right: 0;
+    }
+
     // .header__container
 
     &__container {
@@ -106,6 +112,12 @@
                 top: 50%;
                 transform: translate(-50%, -50%) rotate(-45deg);
             }
+        }
+    }
+
+    @media (max-width: 768px) {
+        .multilanguage {
+            display: none;
         }
     }
 }

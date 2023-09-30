@@ -30,31 +30,6 @@
         </div>
     </section>
 
-    <div class="popup">
-        <div class="popup__container _container">
-            <div class="popup__body">
-                <button class="popup__close" href="#">
-                    <img src="@img/icons/popup-close.svg" alt="">
-                </button>
-                <div class="popup__content">
-                    <form action="" class="form">
-                        <div class="form__input">
-                            <input type="text" name="name" placeholder="Your name">
-                        </div>
-                        <div class="form__input">
-                            <input type="email" name="email" placeholder="Email">
-                        </div>
-                        <div class="form__input">
-                            <textarea name="msg" placeholder="Your question..."></textarea>
-                        </div>
-
-                        <button type="submit" class="_button">Ask a question</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <section class="section" id="swiper">
         <div class="section__container _container">
             <div class="section__body">
@@ -200,7 +175,16 @@
                     <h2>Presents</h2>
                 </div>
                 <div class="section__content">
-                    <video src=""></video>
+                    <div class="iframe">
+                        <div class="placeholder">
+                            <img src="img/video.png" alt="">
+                        </div>
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/xPfTFaqnJVM?si=tqQ7UQ24cb5Zzl33"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
@@ -401,7 +385,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="" class="_button">Ask a question</a>
+                <a href="" class="_button" data-open-popup>Ask a question</a>
             </div>
         </div>
     </section>
