@@ -38,3 +38,24 @@ multilanguage.addEventListener('click', (е) => {
         })
 })
 
+
+document.addEventListener('DOMContentLoaded', function (e) {
+    const langsElems = document.querySelectorAll('.multilanguage');
+    if (langsElems.length) {
+        langsElems.forEach(elem => {
+            const label = elem.querySelector('button label');
+            const currentLnag = elem.querySelector('.gt-current-lang');
+            if (currentLnag) {
+                label.textContent = currentLnag.textContent.toLowerCase()
+            }
+        })
+    }
+})
+
+document.addEventListener('click', function (e) {
+    let targetEl = e.target;
+
+    if (targetEl.classList.contains('glink')) {
+        targetEl.closest('.multilanguage').querySelector('button label').textContent = targetEl.textContent.toLowerCase()
+    }
+})

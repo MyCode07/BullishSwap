@@ -19,7 +19,7 @@
     }
 }
 
-#swiper {
+#mintanbull {
     @include adaptive-value("margin-bottom", 90, 50, 1);
     position: relative;
 
@@ -359,6 +359,7 @@
 
     .accordion {
         margin-bottom: 30px;
+        max-width: 736px;
 
         & > :not(:last-child) {
             margin-bottom: 8px;
@@ -381,7 +382,6 @@
 
             &-title {
                 display: flex;
-                align-items: center;
                 justify-content: space-between;
 
                 button {
