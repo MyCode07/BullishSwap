@@ -59,11 +59,13 @@
         // .swiper-wrapper
 
         &-wrapper {
+         
         }
 
         // .swiper-slide
 
         &-slide {
+           
             height: calc((100% - 32px) / 2) !important;
             width: 256px;
 
@@ -77,6 +79,7 @@
                 height: 100%;
                 object-fit: contain;
             }
+ 
         }
     }
 

@@ -1,43 +1,56 @@
 import Swiper from 'swiper';
 import { Pagination, Autoplay, Grid } from 'swiper/modules';
 
-const sliders = document.querySelectorAll('.swiper');
+const sliders = document.querySelector('.swiper');
 const pagination = document.querySelector('.pagination')
+const slides = sliders.querySelectorAll('.swiper-slide');
 
-if (sliders.length) {
-    sliders.forEach(slider => {
-        new Swiper(slider, {
-            modules: [
-                Pagination, Autoplay, Grid
-            ],
+let n = 0;
 
-            slidesPerView: 'auto',
-            spaceBetween: 32,
-            lazy: true,
-            autoplay: true,
-            autoplay: {
-                delay: 3000,
-                disableOnInteraction: false,
-            },
+for (let i = 0; i < slides.length; i++) {
+    const element = slides[i];
 
-            pagination: {
-                el: pagination,
-                clickable: true
-            },
-            breakpoints: {
-                300: {
-                    centeredSlides: true,
-                    grid: false
-                },
-                769: {
-                    centeredSlides: false,
-                    grid: {
-                        rows: 2
-                    },
-                }
-            }
-
-
-        })
-    })
+    if (i == (n * 8 + 1)) {
+        slides[i].style.order = i
+        console.log(i);
+    }
+    else if (i == (n * 8 + 2)) {
+        slides[i].style.order = i + 1
+    }
+    n++
 }
+
+new Swiper(sliders, {
+    modules: [
+        Pagination, Autoplay, Grid
+    ],
+
+    slidesPerView: 'auto',
+    spaceBetween: 32,
+    lazy: true,
+    slidesPerGroup: 8,
+    speed: 300,
+    // autoplay: {
+    //     delay: 3000,
+    //     disableOnInteraction: false,
+    // },
+
+    pagination: {
+        el: pagination,
+        clickable: true
+    },
+    breakpoints: {
+        300: {
+            centeredSlides: true,
+            grid: false
+        },
+        769: {
+            centeredSlides: false,
+            grid: {
+                rows: 2
+            },
+        }
+    }
+
+
+})
