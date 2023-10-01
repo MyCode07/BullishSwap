@@ -1,5 +1,5 @@
 import { isMobile } from "../utils/isMobile.js";
-
+import { lockPadding, unLockPadding } from "../utils/lockPadding.js";
 const popup = document.querySelector('.popup');
 const popupOpenButtons = document.querySelectorAll('[data-open-popup]');
 

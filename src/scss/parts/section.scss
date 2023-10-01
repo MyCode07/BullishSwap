@@ -440,3 +440,33 @@
         }
     }
 }
+
+._text {
+    @include adaptive-value("padding-top", 200, 100, 1);
+    @include adaptive-value("padding-bottom", 200, 100, 1);
+
+    h1 {
+        text-align: center;
+        @include adaptive-value("font-size", 80, 50, 1);
+        margin-bottom: 0.5em;
+    }
+
+    h2 {
+        margin-bottom: 0.5em;
+    }
+
+    h3 {
+        margin-bottom: 1em;
+    }
+
+    h4,
+    h5,
+    h6 {
+        @include adaptive-value("font-size", 24, 18, 1);
+        margin-bottom: 1em;
+    }
+
+    p {
+        margin-bottom: 10px;
+    }
+}
