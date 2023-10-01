@@ -1,4 +1,5 @@
 import "./parts/menu.js";
+import "./parts/langs.js";
 import "./parts/sliders.js";
 import "./parts/popup.js";
 import "./parts/video.js";
