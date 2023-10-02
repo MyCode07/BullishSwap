@@ -30,7 +30,6 @@ foreach($arr as $key => $value) {
 
 // $body .= "\n" . $_SERVER['REMOTE_ADDR'];
 // $body .= "\n" . date('d.m.y H:i:s');
-
 // 'HTML' и HTML
 
 $param = [

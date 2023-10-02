@@ -5,6 +5,7 @@ const menu = document.querySelector('.header');
 const burger = document.querySelector('.header__burger');
 const multilanguage = document.querySelector('.multilanguage');
 const menuLinks = document.querySelectorAll('.header nav li a');
+const footerLinks = document.querySelectorAll('.footer nav li a');
 
 
 if (burger && window.innerWidth <= 768) {
@@ -43,6 +44,19 @@ if (menuLinks.length) {
 
                 document.body.classList.toggle('_noscroll');
             }
+        })
+    })
+}
+
+if (footerLinks.length) {
+    footerLinks.forEach(link => {
+        const section = document.querySelector(`#${link.dataset.id}`);
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            })
         })
     })
 }
