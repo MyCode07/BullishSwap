@@ -6,29 +6,34 @@ const burger = document.querySelector('.header__burger');
 const multilanguage = document.querySelector('.multilanguage');
 const menuLinks = document.querySelectorAll('.header nav li a');
 
-if (window.innerWidth <= 768) {
 
-    if (burger) {
-        burger.addEventListener('click', (е) => {
-            burger.classList.toggle('_active');
-            menu.classList.toggle('_open');
-            document.body.classList.toggle('_noscroll');
-            multilanguage.classList.toggle('_active');
+if (burger && window.innerWidth <= 768) {
+    burger.addEventListener('click', (е) => {
+        burger.classList.toggle('_active');
+        menu.classList.toggle('_open');
+        document.body.classList.toggle('_noscroll');
+        multilanguage.classList.toggle('_active');
 
-            if (menu.classList.contains('_open')) {
-                lockPadding();
-            }
-            else {
-                unLockPadding()
-            }
-        })
-    }
+        if (menu.classList.contains('_open')) {
+            lockPadding();
+        }
+        else {
+            unLockPadding()
+        }
+    })
+}
 
+if (menuLinks.length) {
+    menuLinks.forEach(link => {
+        const section = document.querySelector(`#${link.dataset.id}`);
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            section.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            })
 
-    if (menuLinks.length) {
-        menuLinks.forEach(link => {
-            link.addEventListener('click', (е) => {
-
+            if (burger && window.innerWidth <= 768) {
                 if (!isMobile.any())
                     if (menu.classList.contains('_open')) unLockPadding();
                     else lockPadding()
@@ -37,7 +42,7 @@ if (window.innerWidth <= 768) {
                 burger.classList.toggle('_active');
 
                 document.body.classList.toggle('_noscroll');
-            })
+            }
         })
-    }
+    })
 }

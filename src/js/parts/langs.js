@@ -12,7 +12,8 @@ async function getLangs() {
         alert("Error");
     }
 }
-getLangs();
+// getLangs();
+
 
 
 let allLang = [];
@@ -81,3 +82,5 @@ function changeLanguage(data) {
     })
 
 }
+
+changeLanguage(langsArray);

@@ -1,4 +1,4 @@
-<div class="popup">
+<div class="popup _fixed">
     <div class="popup__container _container">
         <div class="popup__body">
             <div class="popup__content">
@@ -8,13 +8,13 @@
 
                 <form action="" class="form">
                     <div class="form__input">
-                        <input type="text" name="name" placeholder="Your name">
+                        <input data-required type="text" name="name" placeholder="Your name">
                     </div>
                     <div class="form__input">
-                        <input type="email" name="email" placeholder="Email">
+                        <input data-required type="email" name="email" placeholder="Email">
                     </div>
                     <div class="form__input">
-                        <textarea name="msg" placeholder="Your question..."></textarea>
+                        <textarea data-required name="msg" placeholder="Your question..."></textarea>
                     </div>
 
                     <button type="submit" class="_button" data-ml="popup-btn">Ask a question</button>

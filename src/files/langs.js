@@ -1,4 +1,4 @@
-{
+var langsArray = {
     "hl-1": {
         "en": "Mint an Bull",
         "ru": "Мятный бык",

@@ -18,28 +18,24 @@ new Swiper(sliders, {
     },
 
     autoplay: {
-        delay: 8000,
+        delay: 4000,
         disableOnInteraction: false,
     },
+    speed: 600,
 
     breakpoints: {
         300: {
             centeredSlides: true,
             grid: false,
             slidesPerGroup: 1,
-            autoplay: {
-                delay: 4000,
-            },
-            speed: 600,
         },
         769: {
             centeredSlides: false,
             grid: {
                 rows: 2,
                 fill: 'row',
-                slidesPerGroup: 4,
             },
-            speed: 300,
+            slidesPerGroup: 4,
         }
     }
 })
